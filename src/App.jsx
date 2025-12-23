@@ -1,16 +1,19 @@
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import HomePage from "./pages/HomePage"
 import FormPage from "./pages/FormPage"
+ import ResultsPage from "./pages/ResultsPage";
 function App() {
   return (
   
-      <Router>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/form" element={<FormPage />} />
-        </Routes>
-      </Router>
+<Router>
+<Routes>
+  <Route path="/" element={<HomePage />} />
+  <Route path="/form/:recipient" element={<FormPage />} />
+  <Route path="/results" element={<ResultsPage />} />
+</Routes>
+</Router>
+
 
 
   )
